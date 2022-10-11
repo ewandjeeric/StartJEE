@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>com.sid.Test</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Session</servlet-name>
+		<servlet-class>com.sid.Session</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Session</servlet-name>
+		<url-pattern>/session</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Cookies</servlet-name>
+		<servlet-class>com.sid.Cookies</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cookies</servlet-name>
+		<url-pattern>/cookie</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Databases</servlet-name>
+		<servlet-class>com.sid.Databases</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Databases</servlet-name>
+		<url-pattern>/db</url-pattern>
+	</servlet-mapping>
+	<servlet> 
+		<servlet-name>Home</servlet-name> 
+		<servlet-class>com.sid.Home</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	<servlet-name>Form</servlet-name>
+	<servlet-class>com.sid.Form</servlet-class>
+	 <multipart-config>
+            <location>/Users/PC/Documents/File/</location> <!-- A adapter chez vous -->
+            <max-file-size>10485760</max-file-size> <!-- 10 Mo -->
+            <max-request-size>52428800</max-request-size> <!-- 5 x 10 Mo -->
+            <file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+        </multipart-config>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>Form</servlet-name>
+	<url-pattern>/form</url-pattern>
+	</servlet-mapping>
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/lib.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/css/*</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
